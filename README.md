@@ -1,4 +1,4 @@
-[PDF](gaussian_talker.pdf)
+[Presentation](gaussian_talker.pdf)
 
 For attention experiments, I used Vision transformer code from following source code: [Link](https://www.kaggle.com/datasets/piantic/visiontransformerpytorch121)
 
