@@ -47,8 +47,10 @@ class TriplaneRepresentation(nn.Module):
                 
                 batch_features.append(interp)
             
-            # Stack features from different planes
-            combined = torch.stack(batch_features, dim=1)
+            # # Stack features from different planes
+            # combined = torch.stack(batch_features, dim=1)
+            # taking hadamard (element-wise) product acroos features of all planes
+            combined = torch.prod(torch.stack(batch_features, dim=1), dim=1)
             all_features.append(combined)
         
         return torch.cat(all_features, dim=0)
